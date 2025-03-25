@@ -22,7 +22,7 @@ Aplicativo de finanças pessoais desenvolvido com React Native e Expo.
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/finances.git
+git clone https://github.com/ademisson-Auto/Finances.git
 cd finances
 
 # Instale as dependências
