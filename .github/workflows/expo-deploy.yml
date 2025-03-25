@@ -32,6 +32,28 @@ jobs:
         
       - name: Install EAS CLI globally
         run: npm install -g eas-cli
+
+      - name: Create eas.json for CI
+        run: |
+          cat > eas.json << EOL
+          {
+            "cli": {
+              "version": ">= 5.9.1",
+              "appVersionSource": "remote"
+            },
+            "build": {
+              "preview": {
+                "distribution": "internal",
+                "android": {
+                  "buildType": "apk",
+                  "gradleCommand": ":app:assembleRelease",
+                  "withoutCredentials": true
+                }
+              }
+            }
+          }
+          EOL
+          cat eas.json
           
       - name: Build app
-        run: eas build --platform android --profile development --non-interactive --no-wait 
+        run: eas build --platform android --profile preview --non-interactive --no-wait 
