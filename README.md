@@ -63,4 +63,4 @@ Este projeto está configurado com GitHub Actions para automatizar o processo de
 - `/src/screens` - Telas do aplicativo
 - `/src/services` - Serviços de API
 - `/src/types` - Definições de tipos TypeScript
-- `/src/utils` - Funções utilitárias 
+- `/src/utils` - Funções utilitárias
